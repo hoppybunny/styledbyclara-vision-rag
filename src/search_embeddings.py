@@ -10,11 +10,10 @@ def search_similar_images(query_embedding, top_k=5):
     """
     Perform similarity search in Pinecone:
     - Query Pinecone index for the top_k results.
-    - Retrieve metadata (name, url, image_url) for matches.
+    - Retrieve metadata (name, image_url) for matches.
     """
     index = pinecone_client.Index("styledbyclara-index")
 
-    # Perform the query with keyword arguments
     query_results = index.query(
         vector=query_embedding.tolist(),
         top_k=top_k,
