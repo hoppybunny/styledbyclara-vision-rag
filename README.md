@@ -3,9 +3,9 @@
 ## Purpose
 The goal is to enable users to find personalized fashion recommendations by uploading an image or entering a text query. The system searches through a Pinecone database of 400 real-world fashion images with associated metadata and generates relevant suggestions enhanced with OpenAI's language capabilities.
 
-### Key Features
-1. **Visual Search:** Users can upload an image to find similar fashion items.
-2. **Text-Based Recommendations:** Users can input textual descriptions to get relevant results.
+### Key features
+1. **Visual search:** Users can upload an image to find similar fashion items.
+2. **Text based recommendations:** Users can input textual descriptions to get relevant results.
 3. **Multimodal:** The system supports combining image and text inputs for richer results.
 
 ---
@@ -18,8 +18,8 @@ The goal is to enable users to find personalized fashion recommendations by uplo
 - Embeddings: Images are embedded into a 512-dimensional vector space using OpenAI's CLIP model (`openai/clip-vit-base-patch32`).
 
 ### 2. **Data preparation**
-- Image Scraping
-- Embedding Generation:
+- Image scraping
+- Embedding generation:
   - Each image is processed using the CLIP model to generate embeddings.
   - Metadata is added directly to Pinecone for retrieval.
 
@@ -36,12 +36,12 @@ The goal is to enable users to find personalized fashion recommendations by uplo
 
 ---
 
-### Example Usage
+### Example
 
 #### Input
 - Image: Upload an image of a dress. (sample image is stored in `data/clothes_data.json`)
 
-#### Output
+#### GPT output
 ```
 Here are some stylish outfit options from StyleNow that you can consider: 
 
